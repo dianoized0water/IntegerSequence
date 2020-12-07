@@ -31,8 +31,7 @@ public class ArraySequence implements IntegerSequence{
 
   public int next(){
     if(hasNext()){
-      currentIndex++;
-      return data[currentIndex - 1];
+      return data[currentIndex++];
     }
     else{
       throw new NoSuchElementException();
