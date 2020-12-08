@@ -10,12 +10,7 @@ public class ArraySequence implements IntegerSequence{
   }
 
   public ArraySequence(IntegerSequence otherseq){
-    int a = 0;
-    otherseq.reset();
-    while (otherseq.hasNext()){
-      otherseq.next();
-      a++;
-    }
+    int a = otherseq.length();
     otherseq.reset();
     data = new int[a];
     for (int i=0; i<a; i++){
@@ -40,5 +35,9 @@ public class ArraySequence implements IntegerSequence{
 
   public void reset(){
     currentIndex = 0;
+  }
+
+  public int length(){
+    return data.length;
   }
 }
