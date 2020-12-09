@@ -21,12 +21,7 @@ public class ArraySequence implements IntegerSequence{
   }
 
   public boolean hasNext(){
-    if (currentIndex<data.length){
-      return true;
-    }
-    else {
-      throw new NoSuchElementException();
-    }
+    return currentIndex<data.length;
   }
 
   public int next(){
